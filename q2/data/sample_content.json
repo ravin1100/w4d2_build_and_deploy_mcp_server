@@ -1,0 +1,625 @@
+{
+    "users": [
+      {
+        "user_id": "u1",
+        "name": "Amit Sharma",
+        "email": "amit.sharma@example.com",
+        "timezone": "Asia/Kolkata",
+        "working_hours": {"start": "09:00", "end": "18:00"},
+        "preferences": {"no_meetings": ["12:30-13:30"], "preferred_days": ["Monday", "Wednesday", "Friday"]}
+      },
+      {
+        "user_id": "u2",
+        "name": "Sara Lee",
+        "email": "sara.lee@example.com",
+        "timezone": "America/New_York",
+        "working_hours": {"start": "08:00", "end": "17:00"},
+        "preferences": {"no_meetings": ["12:00-13:00"], "preferred_days": ["Tuesday", "Thursday"]}
+      },
+      {
+        "user_id": "u3",
+        "name": "Lukas Müller",
+        "email": "lukas.mueller@example.com",
+        "timezone": "Europe/Berlin",
+        "working_hours": {"start": "10:00", "end": "19:00"},
+        "preferences": {"no_meetings": ["15:00-16:00"], "preferred_days": ["Monday", "Friday"]}
+      },
+      {
+        "user_id": "u4",
+        "name": "Emily Chen",
+        "email": "emily.chen@example.com",
+        "timezone": "Asia/Shanghai",
+        "working_hours": {"start": "09:00", "end": "18:00"},
+        "preferences": {"no_meetings": ["13:00-14:00"], "preferred_days": ["Wednesday", "Thursday"]}
+      },
+      {
+        "user_id": "u5",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "timezone": "America/Los_Angeles",
+        "working_hours": {"start": "08:00", "end": "17:00"},
+        "preferences": {"no_meetings": ["11:30-12:30"], "preferred_days": ["Monday", "Tuesday", "Friday"]}
+      },
+      {
+        "user_id": "u6",
+        "name": "Priya Patel",
+        "email": "priya.patel@example.com",
+        "timezone": "Asia/Mumbai",
+        "working_hours": {"start": "10:00", "end": "19:00"},
+        "preferences": {"no_meetings": ["14:00-15:00"], "preferred_days": ["Tuesday", "Thursday"]}
+      },
+      {
+        "user_id": "u7",
+        "name": "David Johnson",
+        "email": "david.johnson@example.com",
+        "timezone": "Europe/London",
+        "working_hours": {"start": "09:00", "end": "17:00"},
+        "preferences": {"no_meetings": ["13:00-14:00"], "preferred_days": ["Monday", "Wednesday", "Friday"]}
+      },
+      {
+        "user_id": "u8",
+        "name": "Maria Rodriguez",
+        "email": "maria.rodriguez@example.com",
+        "timezone": "America/Mexico_City",
+        "working_hours": {"start": "08:30", "end": "17:30"},
+        "preferences": {"no_meetings": ["12:00-13:00"], "preferred_days": ["Tuesday", "Wednesday", "Thursday"]}
+      },
+      {
+        "user_id": "u9",
+        "name": "Takashi Yamamoto",
+        "email": "takashi.yamamoto@example.com",
+        "timezone": "Asia/Tokyo",
+        "working_hours": {"start": "09:00", "end": "18:00"},
+        "preferences": {"no_meetings": ["12:00-13:00"], "preferred_days": ["Monday", "Wednesday"]}
+      },
+      {
+        "user_id": "u10",
+        "name": "Sophie Martin",
+        "email": "sophie.martin@example.com",
+        "timezone": "Europe/Paris",
+        "working_hours": {"start": "09:30", "end": "18:30"},
+        "preferences": {"no_meetings": ["12:30-13:30"], "preferred_days": ["Tuesday", "Thursday", "Friday"]}
+      }
+    ],
+    "meetings": [
+      {
+        "meeting_id": "m1",
+        "title": "Project Kickoff",
+        "participants": ["u1", "u2", "u3"],
+        "start_time": "2025-06-30T14:00:00+05:30",
+        "end_time": "2025-06-30T15:00:00+05:30",
+        "agenda": ["Introduction", "Project Goals", "Timeline Discussion"],
+        "location": "Virtual",
+        "notes": "Initial alignment meeting",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m2",
+        "title": "Design Review",
+        "participants": ["u2", "u4", "u5"],
+        "start_time": "2025-07-01T10:00:00-04:00",
+        "end_time": "2025-07-01T11:00:00-04:00",
+        "agenda": ["UI Feedback", "UX Enhancements"],
+        "location": "Virtual",
+        "notes": "Focus on user experience",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m3",
+        "title": "Sprint Planning",
+        "participants": ["u1", "u3", "u4", "u5"],
+        "start_time": "2025-07-02T16:00:00+02:00",
+        "end_time": "2025-07-02T17:30:00+02:00",
+        "agenda": ["Backlog Review", "Task Assignment"],
+        "location": "Virtual",
+        "notes": "Plan next sprint tasks",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m4",
+        "title": "Weekly Sync",
+        "participants": ["u1", "u2", "u3", "u4", "u5"],
+        "start_time": "2025-07-03T09:00:00+08:00",
+        "end_time": "2025-07-03T10:00:00+08:00",
+        "agenda": ["Status Updates", "Blockers", "Next Steps"],
+        "location": "Virtual",
+        "notes": "Weekly team update",
+        "effectiveness_score": 6
+      },
+      {
+        "meeting_id": "m5",
+        "title": "Retrospective",
+        "participants": ["u1", "u3", "u4"],
+        "start_time": "2025-07-04T11:00:00+05:30",
+        "end_time": "2025-07-04T12:00:00+05:30",
+        "agenda": ["What went well", "Improvements", "Action Items"],
+        "location": "Virtual",
+        "notes": "Sprint retrospective",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m6",
+        "title": "Client Presentation",
+        "participants": ["u2", "u6", "u7"],
+        "start_time": "2025-07-05T15:00:00+00:00",
+        "end_time": "2025-07-05T16:30:00+00:00",
+        "agenda": ["Project Progress", "Demo", "Q&A"],
+        "location": "Conference Room A",
+        "notes": "Client milestone presentation",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m7",
+        "title": "Technical Architecture Review",
+        "participants": ["u1", "u4", "u9"],
+        "start_time": "2025-07-06T10:00:00+09:00",
+        "end_time": "2025-07-06T11:30:00+09:00",
+        "agenda": ["System Design", "Scalability", "Security"],
+        "location": "Virtual",
+        "notes": "Technical deep dive",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m8",
+        "title": "Marketing Strategy",
+        "participants": ["u5", "u8", "u10"],
+        "start_time": "2025-07-07T14:00:00-06:00",
+        "end_time": "2025-07-07T15:00:00-06:00",
+        "agenda": ["Campaign Ideas", "Target Audience", "Budget"],
+        "location": "Marketing Office",
+        "notes": "Q3 marketing planning",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m9",
+        "title": "Daily Standup",
+        "participants": ["u1", "u2", "u3", "u4"],
+        "start_time": "2025-07-08T09:30:00+05:30",
+        "end_time": "2025-07-08T10:00:00+05:30",
+        "agenda": ["Yesterday's work", "Today's plan", "Blockers"],
+        "location": "Virtual",
+        "notes": "Daily team sync",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m10",
+        "title": "Code Review Session",
+        "participants": ["u1", "u4", "u9"],
+        "start_time": "2025-07-09T11:00:00+08:00",
+        "end_time": "2025-07-09T12:00:00+08:00",
+        "agenda": ["Code Quality", "Best Practices", "Refactoring"],
+        "location": "Virtual",
+        "notes": "Weekly code review",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m11",
+        "title": "Budget Planning",
+        "participants": ["u6", "u7", "u8"],
+        "start_time": "2025-07-10T16:00:00+00:00",
+        "end_time": "2025-07-10T17:00:00+00:00",
+        "agenda": ["Resource Allocation", "Cost Analysis", "Forecasting"],
+        "location": "Finance Office",
+        "notes": "Quarterly budget review",
+        "effectiveness_score": 6
+      },
+      {
+        "meeting_id": "m12",
+        "title": "Product Roadmap",
+        "participants": ["u2", "u5", "u6", "u10"],
+        "start_time": "2025-07-11T13:00:00+02:00",
+        "end_time": "2025-07-11T14:30:00+02:00",
+        "agenda": ["Feature Prioritization", "Timeline", "Dependencies"],
+        "location": "Virtual",
+        "notes": "Product planning session",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m13",
+        "title": "Team Building",
+        "participants": ["u1", "u2", "u3", "u4", "u5", "u6", "u7", "u8", "u9", "u10"],
+        "start_time": "2025-07-12T10:00:00+05:30",
+        "end_time": "2025-07-12T12:00:00+05:30",
+        "agenda": ["Icebreakers", "Team Activities", "Lunch"],
+        "location": "Main Conference Room",
+        "notes": "Monthly team building",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m14",
+        "title": "Security Review",
+        "participants": ["u1", "u7", "u9"],
+        "start_time": "2025-07-13T14:00:00+00:00",
+        "end_time": "2025-07-13T15:00:00+00:00",
+        "agenda": ["Vulnerability Assessment", "Security Policies", "Compliance"],
+        "location": "Virtual",
+        "notes": "Monthly security check",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m15",
+        "title": "User Feedback Analysis",
+        "participants": ["u2", "u4", "u5", "u10"],
+        "start_time": "2025-07-14T11:00:00-07:00",
+        "end_time": "2025-07-14T12:00:00-07:00",
+        "agenda": ["Survey Results", "Feature Requests", "Pain Points"],
+        "location": "Virtual",
+        "notes": "User research insights",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m16",
+        "title": "Database Optimization",
+        "participants": ["u1", "u4", "u9"],
+        "start_time": "2025-07-15T15:00:00+09:00",
+        "end_time": "2025-07-15T16:30:00+09:00",
+        "agenda": ["Performance Metrics", "Query Optimization", "Indexing"],
+        "location": "Virtual",
+        "notes": "Database performance review",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m17",
+        "title": "Sales Strategy",
+        "participants": ["u5", "u6", "u8"],
+        "start_time": "2025-07-16T09:00:00-06:00",
+        "end_time": "2025-07-16T10:30:00-06:00",
+        "agenda": ["Lead Generation", "Conversion Rates", "Sales Targets"],
+        "location": "Sales Office",
+        "notes": "Q3 sales planning",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m18",
+        "title": "API Design Workshop",
+        "participants": ["u1", "u3", "u4", "u9"],
+        "start_time": "2025-07-17T13:00:00+02:00",
+        "end_time": "2025-07-17T15:00:00+02:00",
+        "agenda": ["RESTful Design", "Documentation", "Testing"],
+        "location": "Virtual",
+        "notes": "API architecture session",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m19",
+        "title": "Customer Support Training",
+        "participants": ["u6", "u7", "u8", "u10"],
+        "start_time": "2025-07-18T10:00:00+00:00",
+        "end_time": "2025-07-18T11:30:00+00:00",
+        "agenda": ["Best Practices", "Escalation Process", "Tools Training"],
+        "location": "Training Room",
+        "notes": "Monthly support training",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m20",
+        "title": "Performance Review",
+        "participants": ["u1", "u2", "u6"],
+        "start_time": "2025-07-19T16:00:00+05:30",
+        "end_time": "2025-07-19T17:00:00+05:30",
+        "agenda": ["Goal Assessment", "Feedback", "Development Plan"],
+        "location": "HR Office",
+        "notes": "Quarterly performance review",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m21",
+        "title": "Quality Assurance Review",
+        "participants": ["u2", "u3", "u4", "u7"],
+        "start_time": "2025-07-20T12:00:00+02:00",
+        "end_time": "2025-07-20T13:00:00+02:00",
+        "agenda": ["Testing Results", "Bug Analysis", "Quality Metrics"],
+        "location": "Virtual",
+        "notes": "Weekly QA review",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m22",
+        "title": "Vendor Evaluation",
+        "participants": ["u5", "u6", "u7", "u8"],
+        "start_time": "2025-07-21T14:00:00-04:00",
+        "end_time": "2025-07-21T15:30:00-04:00",
+        "agenda": ["Vendor Comparison", "Cost Analysis", "Contract Terms"],
+        "location": "Procurement Office",
+        "notes": "Vendor selection meeting",
+        "effectiveness_score": 6
+      },
+      {
+        "meeting_id": "m23",
+        "title": "DevOps Pipeline Review",
+        "participants": ["u1", "u4", "u9"],
+        "start_time": "2025-07-22T10:00:00+09:00",
+        "end_time": "2025-07-22T11:00:00+09:00",
+        "agenda": ["CI/CD Optimization", "Deployment Process", "Monitoring"],
+        "location": "Virtual",
+        "notes": "DevOps efficiency review",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m24",
+        "title": "Content Strategy",
+        "participants": ["u5", "u8", "u10"],
+        "start_time": "2025-07-23T15:00:00+02:00",
+        "end_time": "2025-07-23T16:00:00+02:00",
+        "agenda": ["Content Calendar", "SEO Strategy", "Social Media"],
+        "location": "Marketing Office",
+        "notes": "Content planning session",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m25",
+        "title": "Risk Assessment",
+        "participants": ["u1", "u6", "u7", "u9"],
+        "start_time": "2025-07-24T11:00:00+00:00",
+        "end_time": "2025-07-24T12:30:00+00:00",
+        "agenda": ["Risk Identification", "Mitigation Strategies", "Contingency Plans"],
+        "location": "Executive Room",
+        "notes": "Project risk review",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m26",
+        "title": "Mobile App Testing",
+        "participants": ["u2", "u4", "u7", "u10"],
+        "start_time": "2025-07-25T09:00:00+08:00",
+        "end_time": "2025-07-25T10:30:00+08:00",
+        "agenda": ["Device Testing", "Performance Analysis", "User Experience"],
+        "location": "Virtual",
+        "notes": "Mobile testing session",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m27",
+        "title": "Compliance Review",
+        "participants": ["u6", "u7", "u8"],
+        "start_time": "2025-07-26T13:00:00-06:00",
+        "end_time": "2025-07-26T14:00:00-06:00",
+        "agenda": ["Regulatory Requirements", "Audit Preparation", "Documentation"],
+        "location": "Legal Office",
+        "notes": "Compliance check",
+        "effectiveness_score": 6
+      },
+      {
+        "meeting_id": "m28",
+        "title": "Innovation Workshop",
+        "participants": ["u1", "u2", "u3", "u5", "u10"],
+        "start_time": "2025-07-27T14:00:00+05:30",
+        "end_time": "2025-07-27T16:00:00+05:30",
+        "agenda": ["Brainstorming", "Technology Trends", "Future Opportunities"],
+        "location": "Innovation Lab",
+        "notes": "Creative thinking session",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m29",
+        "title": "Data Analytics Review",
+        "participants": ["u2", "u4", "u6", "u9"],
+        "start_time": "2025-07-28T16:00:00+09:00",
+        "end_time": "2025-07-28T17:00:00+09:00",
+        "agenda": ["Data Insights", "Analytics Tools", "Reporting"],
+        "location": "Virtual",
+        "notes": "Analytics deep dive",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m30",
+        "title": "Partnership Discussion",
+        "participants": ["u5", "u6", "u8", "u10"],
+        "start_time": "2025-07-29T10:00:00+02:00",
+        "end_time": "2025-07-29T11:30:00+02:00",
+        "agenda": ["Partnership Opportunities", "Strategic Alliances", "Collaboration"],
+        "location": "Business Development Office",
+        "notes": "Strategic partnership planning",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m31",
+        "title": "Infrastructure Planning",
+        "participants": ["u1", "u4", "u7", "u9"],
+        "start_time": "2025-07-30T12:00:00+00:00",
+        "end_time": "2025-07-30T13:30:00+00:00",
+        "agenda": ["Capacity Planning", "Resource Allocation", "Scalability"],
+        "location": "Virtual",
+        "notes": "Infrastructure scaling discussion",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m32",
+        "title": "Training Workshop",
+        "participants": ["u1", "u2", "u3", "u4", "u5"],
+        "start_time": "2025-07-31T14:00:00+05:30",
+        "end_time": "2025-07-31T17:00:00+05:30",
+        "agenda": ["Skill Development", "New Technologies", "Best Practices"],
+        "location": "Training Center",
+        "notes": "Quarterly training session",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m33",
+        "title": "Customer Journey Mapping",
+        "participants": ["u2", "u5", "u8", "u10"],
+        "start_time": "2025-08-01T11:00:00-04:00",
+        "end_time": "2025-08-01T12:30:00-04:00",
+        "agenda": ["User Flow Analysis", "Pain Points", "Improvement Opportunities"],
+        "location": "Virtual",
+        "notes": "Customer experience mapping",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m34",
+        "title": "Agile Ceremony",
+        "participants": ["u1", "u3", "u4", "u6"],
+        "start_time": "2025-08-02T15:00:00+02:00",
+        "end_time": "2025-08-02T16:00:00+02:00",
+        "agenda": ["Sprint Review", "Retrospective", "Planning"],
+        "location": "Virtual",
+        "notes": "Agile process review",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m35",
+        "title": "Product Launch Planning",
+        "participants": ["u2", "u5", "u6", "u8", "u10"],
+        "start_time": "2025-08-03T13:00:00+08:00",
+        "end_time": "2025-08-03T15:00:00+08:00",
+        "agenda": ["Launch Timeline", "Marketing Strategy", "Resource Allocation"],
+        "location": "Conference Room B",
+        "notes": "Product launch coordination",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m36",
+        "title": "Technical Debt Review",
+        "participants": ["u1", "u4", "u7", "u9"],
+        "start_time": "2025-08-04T10:00:00+09:00",
+        "end_time": "2025-08-04T11:30:00+09:00",
+        "agenda": ["Code Quality", "Refactoring Priorities", "Technical Improvements"],
+        "location": "Virtual",
+        "notes": "Technical debt assessment",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m37",
+        "title": "User Interface Design",
+        "participants": ["u2", "u3", "u4", "u10"],
+        "start_time": "2025-08-05T14:00:00+00:00",
+        "end_time": "2025-08-05T15:30:00+00:00",
+        "agenda": ["Design Systems", "User Experience", "Accessibility"],
+        "location": "Design Studio",
+        "notes": "UI/UX design session",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m38",
+        "title": "Financial Review",
+        "participants": ["u5", "u6", "u7", "u8"],
+        "start_time": "2025-08-06T09:00:00-06:00",
+        "end_time": "2025-08-06T10:30:00-06:00",
+        "agenda": ["Budget Analysis", "Revenue Forecasting", "Cost Optimization"],
+        "location": "Finance Office",
+        "notes": "Monthly financial review",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m39",
+        "title": "Automation Strategy",
+        "participants": ["u1", "u4", "u9"],
+        "start_time": "2025-08-07T16:00:00+05:30",
+        "end_time": "2025-08-07T17:00:00+05:30",
+        "agenda": ["Process Automation", "Tool Selection", "Implementation Plan"],
+        "location": "Virtual",
+        "notes": "Automation planning session",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m40",
+        "title": "Market Research",
+        "participants": ["u2", "u5", "u8", "u10"],
+        "start_time": "2025-08-08T12:00:00+02:00",
+        "end_time": "2025-08-08T13:30:00+02:00",
+        "agenda": ["Market Analysis", "Competitor Research", "Trends"],
+        "location": "Research Room",
+        "notes": "Market intelligence gathering",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m41",
+        "title": "Cloud Migration",
+        "participants": ["u1", "u4", "u7", "u9"],
+        "start_time": "2025-08-09T11:00:00+00:00",
+        "end_time": "2025-08-09T12:30:00+00:00",
+        "agenda": ["Migration Strategy", "Cost Analysis", "Timeline"],
+        "location": "Virtual",
+        "notes": "Cloud migration planning",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m42",
+        "title": "Customer Success Review",
+        "participants": ["u2", "u6", "u8", "u10"],
+        "start_time": "2025-08-10T10:00:00-04:00",
+        "end_time": "2025-08-10T11:00:00-04:00",
+        "agenda": ["Customer Health", "Success Metrics", "Retention Strategies"],
+        "location": "Virtual",
+        "notes": "Customer success analysis",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m43",
+        "title": "Integration Testing",
+        "participants": ["u1", "u3", "u4", "u7"],
+        "start_time": "2025-08-11T15:00:00+02:00",
+        "end_time": "2025-08-11T16:30:00+02:00",
+        "agenda": ["API Integration", "System Testing", "Bug Resolution"],
+        "location": "Testing Lab",
+        "notes": "Integration testing session",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m44",
+        "title": "Content Review",
+        "participants": ["u5", "u8", "u10"],
+        "start_time": "2025-08-12T13:00:00+08:00",
+        "end_time": "2025-08-12T14:00:00+08:00",
+        "agenda": ["Content Quality", "Brand Guidelines", "Publishing Schedule"],
+        "location": "Virtual",
+        "notes": "Content quality review",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m45",
+        "title": "Performance Optimization",
+        "participants": ["u1", "u4", "u9"],
+        "start_time": "2025-08-13T14:00:00+09:00",
+        "end_time": "2025-08-13T15:30:00+09:00",
+        "agenda": ["Performance Metrics", "Optimization Techniques", "Monitoring"],
+        "location": "Virtual",
+        "notes": "System performance review",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m46",
+        "title": "Stakeholder Update",
+        "participants": ["u2", "u5", "u6", "u7", "u8"],
+        "start_time": "2025-08-14T16:00:00+00:00",
+        "end_time": "2025-08-14T17:00:00+00:00",
+        "agenda": ["Project Status", "Milestones", "Issues and Risks"],
+        "location": "Executive Conference Room",
+        "notes": "Stakeholder communication",
+        "effectiveness_score": 7
+      },
+      {
+        "meeting_id": "m47",
+        "title": "Machine Learning Workshop",
+        "participants": ["u1", "u2", "u4", "u9"],
+        "start_time": "2025-08-15T10:00:00+05:30",
+        "end_time": "2025-08-15T12:00:00+05:30",
+        "agenda": ["ML Algorithms", "Data Preprocessing", "Model Training"],
+        "location": "AI Lab",
+        "notes": "ML knowledge sharing",
+        "effectiveness_score": 9
+      },
+      {
+        "meeting_id": "m48",
+        "title": "Social Media Strategy",
+        "participants": ["u5", "u8", "u10"],
+        "start_time": "2025-08-16T11:00:00-06:00",
+        "end_time": "2025-08-16T12:00:00-06:00",
+        "agenda": ["Platform Strategy", "Content Calendar", "Engagement Metrics"],
+        "location": "Marketing Office",
+        "notes": "Social media planning",
+        "effectiveness_score": 8
+      },
+      {
+        "meeting_id": "m49",
+        "title": "Disaster Recovery Planning",
+        "participants": ["u1", "u4", "u7", "u9"],
+        "start_time": "2025-08-17T12:00:00+02:00",
+        "end_time": "2025-08-17T13:30:00+02:00",
+        "agenda": ["Backup Strategies", "Recovery Procedures", "Testing"],
+        "location": "Virtual",
+        "notes": "Disaster recovery planning",
+        "effectiveness_score": 8
+      }
+    ]
+}
