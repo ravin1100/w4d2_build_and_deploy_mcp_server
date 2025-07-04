@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "Document MCP": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "textblob",
+        "--with",
+        "nltk",
+        "--with",
+        "py-readability-metrics",
+        "--with",
+        "pydantic",
+        "--with",
+        "fastmcp",
+        "python",
+        "C:\\Users\\Ravin Jangir\\Desktop\\Misogi\\w4d2_build_and_deploy_mcp_server\\q1\\main.py"
+      ]
+    }
+  }
+}
+
+
+or
+
+
+{
+  "mcpServers": {
+    "Document MCP": {
+      "command": "C:\\Users\\Ravin Jangir\\Desktop\\Misogi\\w4d2_build_and_deploy_mcp_server\\q1\\.venv\\Scripts\\python.exe",
+      "args": ["C:\\Users\\Ravin Jangir\\Desktop\\Misogi\\w4d2_build_and_deploy_mcp_server\\q1\\main.py"]
+    }
+  }
+}
