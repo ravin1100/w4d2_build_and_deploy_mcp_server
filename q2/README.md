@@ -33,251 +33,158 @@ An intelligent MCP server that revolutionizes meeting management with AI-powered
 
 ### Installation
 
-1. Clone the repository and navigate to the project:
-   ```bash
-   git clone <repository-url>
-   cd project-directory
-   ```
+1. Clone the repository and navigate to the project directory
+2. Create and activate a virtual environment
+3. Install dependencies using requirements.txt
+4. Configure environment variables in .env file
+5. Run the server using src/main.py
 
-2. Create and activate virtual environment:
-   ```bash
-   # Windows
-   python -m venv venv
-   venv\Scripts\activate
+## 📚 MCP Tools Documentation
 
-   # Unix/MacOS
-   python -m venv venv
-   source venv/bin/activate
-   ```
+### Meeting Management Tools
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+#### 1. Create Meeting (mcp_create_meeting)
+Creates a new meeting with intelligent scheduling features. Takes meeting title, participant list, duration, and optional preferences as input. The tool:
+- Validates participant availability
+- Finds optimal meeting time
+- Generates AI-powered agenda
+- Handles time zone differences
+- Creates a unique meeting ID
+- Saves meeting details
 
-4. Configure environment variables:
-   ```bash
-   # Create .env file
-   touch .env
+#### 2. Find Optimal Slots (mcp_find_optimal_slots)
+Discovers the best available time slots for meetings. Considers:
+- Participant working hours
+- Time zone differences
+- Existing commitments
+- No-meeting preferences
+- Team workload balance
+Returns a list of available time slots ranked by suitability.
 
-   # Add the following to .env
-   GOOGLE_API_KEY=your_api_key_here
-   HOST=0.0.0.0
-   PORT=8000
-   DEBUG=True
-   ```
+#### 3. Detect Scheduling Conflicts (mcp_detect_conflicts)
+Identifies potential scheduling conflicts for users. Features:
+- Time zone aware conflict detection
+- Working hours validation
+- Overlap analysis
+- Buffer time consideration
+Returns detailed conflict information including affected meetings.
 
-5. Run the server:
-   ```bash
-   python src/main.py
-   ```
+### Analytics and Insights Tools
 
-## 📚 API Documentation
+#### 4. Analyze Meeting Patterns (mcp_analyze_patterns)
+Examines meeting behavior and trends. Analyzes:
+- Meeting frequency
+- Duration patterns
+- Participant engagement
+- Time slot preferences
+- Productivity metrics
+Provides insights for better meeting planning.
 
-### Meeting Management
+#### 5. Generate Agenda Suggestions (mcp_suggest_agenda)
+AI-powered tool for creating meeting agendas. Considers:
+- Meeting topic
+- Participant roles
+- Historical meeting data
+- Previous agenda patterns
+- Team dynamics
+Generates contextually relevant agenda items.
 
-#### 1. Create Meeting
-```python
-mcp_create_meeting(
-    title: str,
-    participants: List[str],
-    duration: int,
-    preferences: Dict = None
-) -> Dict
+#### 6. Calculate Workload Balance (mcp_balance_workload)
+Assesses meeting load distribution across team members. Features:
+- Meeting hour calculations
+- Workload comparison
+- Overload detection
+- Balance recommendations
+- Team capacity analysis
 
-# Example
-response = mcp_create_meeting(
-    title="Q2 Planning Review",
-    participants=["u1", "u2", "u3"],
-    duration=60,
-    preferences={"preferred_time": "morning"}
-)
-```
+#### 7. Score Meeting Effectiveness (mcp_score_meeting)
+Evaluates meeting productivity and provides improvement suggestions. Analyzes:
+- Duration efficiency
+- Participant count
+- Agenda completion
+- Meeting objectives
+- Follow-up actions
+Provides a numerical score and actionable recommendations.
 
-#### 2. Find Optimal Slots
-```python
-mcp_find_optimal_slots(
-    participants: List[str],
-    duration: int,
-    date_range: Dict[str, str]
-) -> List[Dict]
-
-# Example
-slots = mcp_find_optimal_slots(
-    participants=["u1", "u2"],
-    duration=45,
-    date_range={
-        "start": "2025-07-10T00:00:00+00:00",
-        "end": "2025-07-11T23:59:59+00:00"
-    }
-)
-```
-
-#### 3. Detect Scheduling Conflicts
-```python
-mcp_detect_conflicts(
-    user_id: str,
-    time_range: Dict[str, str]
-) -> List[Dict]
-
-# Example
-conflicts = mcp_detect_conflicts(
-    user_id="u1",
-    time_range={
-        "start": "2025-07-01T00:00:00+00:00",
-        "end": "2025-07-02T23:59:59+00:00"
-    }
-)
-```
-
-### Analytics and Insights
-
-#### 4. Analyze Meeting Patterns
-```python
-mcp_analyze_patterns(
-    user_id: str,
-    period: Dict[str, str]
-) -> Dict
-
-# Example
-patterns = mcp_analyze_patterns(
-    user_id="u1",
-    period={
-        "start": "2025-06-01T00:00:00+00:00",
-        "end": "2025-06-30T23:59:59+00:00"
-    }
-)
-```
-
-#### 5. Generate Agenda Suggestions
-```python
-mcp_suggest_agenda(
-    meeting_topic: str,
-    participants: List[str]
-) -> List[str]
-
-# Example
-agenda = mcp_suggest_agenda(
-    meeting_topic="Product Launch Strategy",
-    participants=["u1", "u2", "u3"]
-)
-```
-
-#### 6. Calculate Workload Balance
-```python
-mcp_balance_workload(
-    team_members: List[str]
-) -> Dict
-
-# Example
-workload = mcp_balance_workload(
-    team_members=["u1", "u2", "u3", "u4"]
-)
-```
-
-#### 7. Score Meeting Effectiveness
-```python
-mcp_score_meeting(
-    meeting_id: str
-) -> Dict
-
-# Example
-score = mcp_score_meeting(meeting_id="m1")
-```
-
-#### 8. Optimize Schedule
-```python
-mcp_optimize_schedule(
-    user_id: str
-) -> Dict
-
-# Example
-optimization = mcp_optimize_schedule(user_id="u1")
-```
+#### 8. Optimize Schedule (mcp_optimize_schedule)
+Generates schedule optimization recommendations. Considers:
+- Meeting patterns
+- Break times
+- Focus periods
+- Team availability
+- Workload distribution
+Provides personalized scheduling improvements.
 
 ## 📊 Data Models
 
-### User Schema
-```json
-{
-  "user_id": "u1",
-  "name": "John Doe",
-  "email": "john@example.com",
-  "timezone": "America/New_York",
-  "working_hours": {
-    "start": "09:00",
-    "end": "17:00"
-  },
-  "preferences": {
-    "no_meetings": ["12:00-13:00"],
-    "preferred_days": ["Monday", "Wednesday"]
-  }
-}
-```
+### User Profile
+Stores user-specific information including:
+- Personal details (name, email)
+- Time zone preferences
+- Working hours
+- Meeting preferences
+- No-meeting periods
 
-### Meeting Schema
-```json
-{
-  "meeting_id": "m1",
-  "title": "Project Review",
-  "participants": ["u1", "u2"],
-  "start_time": "2025-03-15T10:00:00-04:00",
-  "end_time": "2025-03-15T11:00:00-04:00",
-  "agenda": ["Status Update", "Next Steps"],
-  "location": "Virtual",
-  "notes": "",
-  "effectiveness_score": 8
-}
-```
+### Meeting Record
+Contains meeting-related data including:
+- Meeting details (ID, title)
+- Participant information
+- Timing information
+- Agenda and notes
+- Effectiveness metrics
 
 ## 🔧 Configuration
 
 ### Environment Variables
-- `GOOGLE_API_KEY`: Required for AI-powered features
-- `HOST`: Server host (default: 0.0.0.0)
-- `PORT`: Server port (default: 8000)
-- `DEBUG`: Debug mode (default: True)
+- GOOGLE_API_KEY: For AI features
+- HOST: Server host address
+- PORT: Server port number
+- DEBUG: Debug mode toggle
 
 ### Sample Data
-The system comes with sample data in `data/sample_content.json`:
-- 10+ users across different time zones
-- 60+ meetings with various patterns
-- Different meeting types and configurations
+Includes comprehensive test data:
+- Multiple users across time zones
+- Various meeting types
+- Different scheduling patterns
+- Preference examples
 
 ## 🤝 Best Practices
 
-### Time Handling
-- Always use ISO format with timezone offset
-- Consider participant time zones when scheduling
-- Use UTC for internal operations
+### Time Management
+- Use ISO format with timezone
+- Consider global time differences
+- Maintain buffer periods
+- Respect working hours
 
 ### Meeting Optimization
-- Keep meetings under 60 minutes when possible
-- Include breaks between meetings
-- Respect lunch hours and no-meeting preferences
-- Balance workload across team members
+- Keep meetings focused
+- Include necessary breaks
+- Balance team workload
+- Monitor effectiveness
 
-### AI Features Usage
-- Provide clear meeting topics for better agenda suggestions
-- Include relevant participants for context
-- Review and adjust AI suggestions as needed
+### AI Feature Usage
+- Provide clear contexts
+- Review AI suggestions
+- Update preferences regularly
+- Monitor effectiveness scores
 
 ## 🔍 Troubleshooting
 
 ### Common Issues
-1. **API Key Issues**
-   - Ensure GOOGLE_API_KEY is set in .env
-   - Verify API key has required permissions
+1. API Key Problems
+   - Configuration issues
+   - Permission settings
+   - Key validation
 
-2. **Scheduling Conflicts**
-   - Check time zone configurations
-   - Verify working hours settings
-   - Review no-meeting preferences
+2. Scheduling Conflicts
+   - Time zone mismatches
+   - Preference conflicts
+   - Availability issues
 
-3. **Performance Issues**
-   - Optimize date range queries
-   - Limit participant list size
-   - Use appropriate time slots
+3. Performance Concerns
+   - Query optimization
+   - Data management
+   - Response times
 
 ## 📝 License
 
